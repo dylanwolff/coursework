@@ -2,7 +2,7 @@
 tabby_cat = "\tI'm tabbed in."
 # \n breaks to new line
 persian_cat = "I'm split\non a line."
-# \ a \
+# escapes the backslashes (leaves \ a \)
 backslash_cat = "I'm \\ a \\ cat."
 
 # \t* creates a list item
