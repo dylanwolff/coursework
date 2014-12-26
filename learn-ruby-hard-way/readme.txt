@@ -1,4 +1,3 @@
-Hi there!
 
 I’m using this repo to store the files for the exercises I’m completing as part of Learn Ruby the Hard Way.
 
