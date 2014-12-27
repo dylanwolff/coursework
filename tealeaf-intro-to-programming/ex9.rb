@@ -3,7 +3,7 @@ h = {a:1, b:2, c:3, d:4}
 # returns value of b
 puts h[:b]
 
-# adds key/value pait e:5 to array and returns the array
+# adds key/value pair e:5 to array and returns the array
 h[:e] = 5
 puts h
 
