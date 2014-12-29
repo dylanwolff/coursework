@@ -82,6 +82,55 @@ footer {
   width: 160px;
   margin-top: 15px;
 }
+
 /* Responsive Styling */
+
+@media (max-width: 1199px) {
+  .jumbotron h1 {
+    font-size: 56px;
+    margin-bottom: 30px
+  }
+}
+
+@media (max-width: 991px) {
+  .jumbotron h1 {
+    font-size: 44px;
+  }
+
+  .jumbotron p {
+    padding 0 10px;
+  }
+
+  #get-involved .col-md-4 {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+}
+
+@media (max-width: 767px) {
+  .jumbotron h1 {
+    font-size: 44px;
+  }
+
+  .jumbotron p {
+    font-size: 16px;
+    padding 0;
+  }
+
+  .btn-large {
+    font-size: 18px;
+  }
+
+  .homepage p {
+    font-size: 18px;
+  }
+
+  footer img {
+    max-width: 80%;
+
+  }
+}
+
+
 
 
