@@ -89,6 +89,7 @@ footer {
 }
 
 /* Responsive Styling */
+/* Need to refactor media queries for iPhone */
 
 @media (max-width: 1199px) {
   .jumbotron h1 {
