@@ -25,10 +25,10 @@ footer {
   text-align: center;
   background-image: url('../images/hero_image.jpg');
   color: white;
-  /* displays at 100% page height less height of nav */
-  min-height: -o-calc(100vh - 50px); /* opera */
-  min-height: -webkit-calc(100vh - 50px); /* google, safari */
-  min-height: -moz-calc(100vh - 50px); /* firefox */
+  /* displays at 100% viewport height less height of nav */
+  min-height: -o-calc(100vh - 50px); 
+  min-height: -webkit-calc(100vh - 50px); 
+  min-height: -moz-calc(100vh - 50px);
   /*min-height: 100vh;*/ /*original fix*/
 }
 
