@@ -37,7 +37,6 @@ footer {
   min-height: -o-calc(100vh - 50px); 
   min-height: -webkit-calc(100vh - 50px); 
   min-height: -moz-calc(100vh - 50px);
-  /*min-height: 100vh;*/ /*original fix*/
 }
 
 .jumbotron h1 {
