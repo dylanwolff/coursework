@@ -97,14 +97,6 @@ footer {
 }
 
 /* Responsive Styling */
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-/* Need to refactor media queries for iPhone - button is fixed */
->>>>>>> FETCH_HEAD
-=======
-/* Need to refactor media queries for iPhone - button is fixed */
->>>>>>> FETCH_HEAD
 
 @media (max-width: 1199px) {
   .jumbotron h1 {
