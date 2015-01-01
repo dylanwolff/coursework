@@ -1,0 +1,112 @@
+body {
+  /* Typography Declarations */
+  color: #222222;
+  font-size: 1em;
+  font-family: "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.masthead-heading, 
+.masthead-intro,
+.content-footer {
+   text-align: center;
+ }
+
+.masthead {
+  padding: 6em 0;
+  background: 
+    linear-gradient(
+      rgba(0, 0, 0, 0.20), 
+      rgba(0, 0, 0, 0.20)
+    ),
+    
+    url('https://unsplash.imgix.net/photo-1414589491349-2acf6131176e?q=75&fm=jpg&s=0fc2f75bf5f668bf513d88a721dbe5c9');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  border-top: 5px solid #BDA571;
+}
+
+.masthead-intro {
+  /* Layout Declarations */
+  margin-bottom: 0.1em;
+  /* Typography Declarations */
+  font-family: "Gentium Book Basic", Georgia, serif;
+  font-size: 2em;
+  color: white;
+}
+
+.masthead-heading {
+  /* Layout Declarations */
+  margin-top: -0.2em;
+  /* Typography Declarations */
+  font-family: "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: bold;
+  font-size: 6em;
+  color: white;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+}
+
+.introduction-section,
+.location-section,
+.questions-section {
+  max-width: 38em;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2em;
+}
+
+.questions-section {
+  margin-bottom: 2em;
+}
+
+.social > li {
+  display: inline-block;
+  padding: 0 10px;
+}
+
+.introduction-section > p,
+.location-section > p,
+.content-footer > p {
+  /* Typography Declarations */
+  font-weight: 300;
+  letter-spacing: 0.05em;
+}
+
+.questions-section > h2 {
+  /* Typography Declarations */
+  font-family: "Gentium Book Basic", Georgia, serif;
+  font-size: 1.2em;
+  font-weight: bold;
+  /* Layout */
+  margin: 1em 0 1em 0;
+}
+
+section > h1 {
+  margin-top: 2em;
+}
+
+.content-footer {
+  background-color: #BDA571;
+  padding-top: 2em;
+  padding-bottom: 2em;
+}
+
+a {
+	/* Typography Declrations */
+	font-weight: bold;
+	text-decoration: none;
+	color: #A67D02;
+}
+
+a:hover {
+	/* Tyopography Declarations */
+	color: #DFB945;
+}
+
+a:visited {
+	/* Typography Declarations */
+	color: #594A1C;
+}
+
+
