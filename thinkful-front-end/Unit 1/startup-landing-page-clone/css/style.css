@@ -77,6 +77,9 @@ div {
 
 .top-navigation {
   background-color: #fff;
+  position: fixed;
+  width: 100%;
+  z-index: 9999;
 }
 
 .top-navigation > .content {
@@ -111,14 +114,14 @@ div {
   color: #333333;
 }
 
-/* Jumbotron */
+/* Introduction */
 .introduction {
   background-image: url("../images/first-background.jpg");
   background-position: center bottom;
   background-repeat: no-repeat;
   background-size: cover;
   overflow: auto;
-  height: 665px;
+  height: 730px;
 }
 
 .introduction .content {
@@ -163,6 +166,56 @@ div {
   cursor: pointer;
   background-color: #d11919;
 }
+
+/* Cases */
+
+.cases {
+  background: #fff;
+  padding-top: 105px;
+  padding-bottom: 125px;
+}
+
+.cases .content {
+  color: #1d1e21;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+}
+
+.cases h2 {
+  font-size: 2.75rem;
+  margin: 1.625rem 0 3.125rem;
+  font-weight: 300;
+}
+
+.cases h3 {
+  margin-top: 20px;
+  font-size: 1.25rem;
+  font-weight: 300;
+}
+
+.cases .devices {
+  width: 33%;
+  display: inline-block;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
