@@ -2,9 +2,11 @@
   background: teal;
 }
 
+/*
 #important-events li {
   background: steelblue;
 }
+*/
 
 /* Select only p elements that are direct children of the section elements */
 section > p {
