@@ -4,7 +4,7 @@
 // Click and hold, throws a Hadouken
 // Release click, returns to ready pose
 // Hold "x", assumes "looking cool" pose
-// Release "x", returns to ready pose
+
 
 $(document).ready(function() {
   $('.ryu').mouseenter(function() {
@@ -21,7 +21,7 @@ $(document).ready(function() {
     $('.ryu-ready').hide();
     $('.ryu-throwing').show();
     //show hadouken
-    $('.hadouken').show()
+    $('.hadouken').show();
     $('.hadouken').finish().show()
     //animate hadouken to the right
     .animate(
@@ -46,8 +46,21 @@ function playHadouken () {
   $('#hadouken-sound')[0].play();
 }
 
-
-
+ //Hold "x", assumes "looking cool" pose
+$(document).keydown(function(e) {
+   if (e.which == 88) {
+      $('.ryu-still').hide();
+      $('.ryu-ready').hide();
+      $('.ryu-throwing').hide();
+      $('.ryu-cool').show();
+}
+})
+/*// Release "x", returns to ready pose
+  .keyup(function) {
+    $('.ryu-cool').hide();
+    $('.ryu-still').show();
+});
+*/
 
 
 
