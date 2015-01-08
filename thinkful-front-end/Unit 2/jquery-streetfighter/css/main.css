@@ -27,8 +27,9 @@ body {
 
 .instructions {
   position: absolute;
-  right: 100px;
+  right: 70px;
   top: 120px;
+  max-width: 30%;
 }
 
 .instructions h1 {
@@ -54,6 +55,7 @@ body {
   top: 168px;
   left: -200px;
   float: left;
+  display: none;
 }
 
 .ryu {
