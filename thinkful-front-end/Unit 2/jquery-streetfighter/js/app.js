@@ -1,10 +1,3 @@
-// Page loads, Ryu standing still
-// Hover over Ryu, shifts to ready pose
-// Stop hover, goes back to still
-// Click and hold, throws a Hadouken
-// Release click, returns to ready pose
-// Hold "x", assumes "looking cool" pose
-
 //Function to play hadouken sound
 function playHadouken () {
   $('#hadouken-sound')[0].volume = 0.5;
@@ -12,15 +5,19 @@ function playHadouken () {
   $('#hadouken-sound')[0].play();
 }
 
+// Page loads, Ryu standing still
 $(document).ready(function() {
+  // Hover over Ryu, shifts to ready pose
   $('.ryu').mouseenter(function() {
     $('.ryu-still').hide();
     $('.ryu-ready').show();
   })
+  // Stop hover, goes back to still
   .mouseleave(function() {
     $('.ryu-ready').hide();
     $('.ryu-still').show();
   })
+  //Click and hold
   .mousedown(function() {
     //play hadouken sound
     playHadouken();
@@ -39,14 +36,14 @@ $(document).ready(function() {
       }
     );
   })
+  //Release click, returns to ready pose
   .mouseup(function() {
-    //ryu goes back to ready position
     $('.ryu-throwing').hide();
     $('.ryu-ready').show();
   });
 });
 
- //Hold "x", assumes "looking cool" pose
+//Hold "x", assumes "looking cool" pose
 $(document).keydown(function(e) {
    if (e.which == 88) {
       $('.ryu-still').hide();
