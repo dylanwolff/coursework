@@ -93,7 +93,7 @@ input#add-item {
   width: 318px;
 }
 
-.add-button:hover {
+#add-button:hover {
   color: #0FC57C;
 }
 
