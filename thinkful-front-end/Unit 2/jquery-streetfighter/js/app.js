@@ -11,18 +11,24 @@ $(document).ready(function() {
   $('.ryu').mouseenter(function() {
     $('.ryu-still').hide();
     $('.ryu-ready').show();
+    $('.ryu-throwing').hide();
+    $('.ryu-cool').hide();
   })
   // Stop hover, goes back to still
   .mouseleave(function() {
-    $('.ryu-ready').hide();
     $('.ryu-still').show();
+    $('.ryu-ready').hide();
+    $('.ryu-throwing').hide();
+    $('.ryu-cool').hide();
   })
   //Click and hold
   .mousedown(function() {
     //play hadouken sound
     playHadouken();
+    $('.ryu-still').hide();
     $('.ryu-ready').hide();
     $('.ryu-throwing').show();
+    $('.ryu-cool').hide();
     //show hadouken
     $('.hadouken').show();
     $('.hadouken').finish().show()
@@ -38,8 +44,10 @@ $(document).ready(function() {
   })
   //Release click, returns to ready pose
   .mouseup(function() {
-    $('.ryu-throwing').hide();
+    $('.ryu-still').hide();
     $('.ryu-ready').show();
+    $('.ryu-throwing').hide();
+    $('.ryu-cool').hide();
   });
 });
 
@@ -54,7 +62,9 @@ $(document).keydown(function(e) {
 })
 /*// Release "x", returns to ready pose
   .keyup(function) {
-    $('.ryu-cool').hide();
-    $('.ryu-still').show();
+      $('.ryu-still').hide();
+      $('.ryu-ready').show();
+      $('.ryu-throwing').hide();
+      $('.ryu-cool').hide();
 });
 */
