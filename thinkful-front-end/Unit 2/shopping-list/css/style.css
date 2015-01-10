@@ -59,8 +59,7 @@ button:hover {
 }
 
 /* Heading */
-h3,
-label[for='add-item'] {
+h3 {
   color: #333;
   font-weight: 700;
   font-size: 15px;
@@ -84,9 +83,9 @@ input[type="text"] {
 }
 
 /* Add Item */
-label[for='add-item'] {
-  display: block;
-  margin: 0 0 20px;
+
+.container p {
+  padding-top: 20px;
 }
 
 input#add-item {
@@ -94,7 +93,7 @@ input#add-item {
   width: 318px;
 }
 
-p > button:hover {
+.add-button:hover {
   color: #0FC57C;
 }
 
@@ -111,7 +110,7 @@ li > input[type="checkbox"] {
   top: 15px;
 }
 
-li > label {
+li > span {
   font-size: 18px;
   line-height: 40px;
   width: 237px;
@@ -122,6 +121,12 @@ li >  input[type="text"] {
   width: 226px;
 }
 
-li > .delete:hover {
+.delete-button:hover {
   color: #CF2323;
 }
+
+li.done span {
+  text-decoration: line-through;
+}
+
+

@@ -6,17 +6,18 @@
   <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/style.css">
-  <script src="//code.jquery.com/jquery.min.js"></script>
+  <script src="https://code.jquery.com/jquery.min.js"></script>
+  <script src="js/app.js"></script>
 </head>
 <body>
   <span class="overlay">
   <div class="container">
-    <p>
-      <label for="add-item">Add Item</label><input id="add-item" type="text"><button>Add</button>
-    </p>
+    <h3>Add Item</h3>
+    <p><input id="add-item" type="text"><button class="add-button">Add</button></p>
     <h3>List</h3>
     <ul id="list">
-      <li><input type="checkbox"><label>Coffee</label><button class="delete">Delete</button></li>
+      <li class="done"><input type="checkbox"><span>Coffee</span><button class="delete-button">Delete</button></li>
+      <li class="todo"><input type="checkbox"><span>Coffee</span><button class="delete-button">Delete</button></li>
     </ul>
   </div>
 </body>
