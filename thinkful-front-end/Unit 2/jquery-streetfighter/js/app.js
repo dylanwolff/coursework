@@ -49,23 +49,22 @@ $(document).ready(function() {
     $('.ryu-throwing').hide();
     $('.ryu-cool').hide();
   });
-});
-
-//Hold "x", assumes "looking cool" pose
-$(document).keydown(function(e) {
-   if (e.which == 88) {
-      $('.ryu-still').hide();
-      $('.ryu-ready').hide();
-      $('.ryu-throwing').hide();
-      $('.ryu-cool').show();
+    //Hold "x", assumes "looking cool" pose
+  $(document).keydown(function(e) {
+     if (e.which == 88) {
+        $('.ryu-still').hide();
+        $('.ryu-ready').hide();
+        $('.ryu-throwing').hide();
+        $('.ryu-cool').show();
+      }
+  })
+  //Release "x", returns to ready pose
+  $(document).keyup(function(e) {
+      if (e.which == 88) {
+        $('.ryu-still').hide();
+        $('.ryu-ready').show();
+        $('.ryu-throwing').hide();
+        $('.ryu-cool').hide();
     }
-})
-//Release "x", returns to ready pose
-$(document).keyup(function(e) {
-    if (e.which == 88) {
-      $('.ryu-still').hide();
-      $('.ryu-ready').show();
-      $('.ryu-throwing').hide();
-      $('.ryu-cool').hide();
-    }
+  });
 });
