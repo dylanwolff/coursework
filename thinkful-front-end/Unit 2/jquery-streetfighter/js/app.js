@@ -5,16 +5,16 @@ function playHadouken () {
   $('#hadouken-sound')[0].play();
 }
 
-// Page loads, Ryu standing still
+//Page loads, Ryu standing still
 $(document).ready(function() {
-  // Hover over Ryu, shifts to ready pose
+  //Hover over Ryu, shifts to ready pose
   $('.ryu').mouseenter(function() {
     $('.ryu-still').hide();
     $('.ryu-ready').show();
     $('.ryu-throwing').hide();
     $('.ryu-cool').hide();
   })
-  // Stop hover, goes back to still
+  //Stop hover, goes back to still
   .mouseleave(function() {
     $('.ryu-still').show();
     $('.ryu-ready').hide();
@@ -58,13 +58,14 @@ $(document).keydown(function(e) {
       $('.ryu-ready').hide();
       $('.ryu-throwing').hide();
       $('.ryu-cool').show();
-}
+    }
 })
-/*// Release "x", returns to ready pose
-  .keyup(function) {
+//Release "x", returns to ready pose
+$(document).keyup(function(e) {
+    if (e.which == 88) {
       $('.ryu-still').hide();
       $('.ryu-ready').show();
       $('.ryu-throwing').hide();
       $('.ryu-cool').hide();
+    }
 });
-*/
