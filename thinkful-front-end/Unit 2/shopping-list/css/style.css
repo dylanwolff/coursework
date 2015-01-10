@@ -1,5 +1,5 @@
 html {
-  background: url('../images/berriesincup.jpeg');
+  background: url('../images/cafetable.jpeg');
   background-size: cover;
   background-repeat: no-repeat;
   min-height: 100%;
@@ -124,10 +124,4 @@ li >  input[type="text"] {
 
 li > .delete:hover {
   color: #CF2323;
-}
-
-/* Completed */
-#completed-tasks label {
-  text-decoration: line-through;
-  color: #888;
 }
