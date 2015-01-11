@@ -12,7 +12,7 @@ $(document).ready(function() {
     //Add validation so empty items can't be added
   $('#add-button').click(function() {
     if( $('#add-item').val().trim().length == 0 ) {
-        $('#add-item').css('border', '1px solid red');
+        $('#add-item').css('border', '1px solid #CF2323');
         $('#add-item').val('');
     } else { 
     $('ul').append('<li class="todo"><input type="checkbox"><span>' 
