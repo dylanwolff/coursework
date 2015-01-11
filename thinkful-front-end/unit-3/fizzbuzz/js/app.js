@@ -3,10 +3,10 @@
     //if number % 3 = 0 && number % 3 = 0
     //print fizzbuzz
   //If divisible by 3, print "fizz"
-    //elseif number % 3 = 0
+    //else if number % 3 = 0
     //print fizz
   //If divisible by 5, print "buzz"
-    //elseif number % 5 = 0
+    //else if number % 5 = 0
     //print buzz
   //If not divisible by 3 or 5, print number
     //else
@@ -14,16 +14,25 @@
 
   //Modulus - ie 36 % 3 = 0
 
-
-for (i = 1; i < 101; i = i + 1) {
-  if (x % 3 == 0 && x % 5 == 0) {
-    puts "fizzbuzz"
+for (i = 1; i <= 100; i++)
+{
+  if (i % 3 == 0 && i % 5 == 0) {
+    console.log("FizzBuzz");
   }
-  elseif (x % 3 == 0) {
-    puts "fizz"
+  else if (i % 3 == 0) {
+    console.log("Fizz");
   }
-  elseif (x % 5 == 0) {
-    puts "buzz"
+  else if (i % 5 == 0) {
+    console.log("Buzz");
   }
-  else puts x
+  else {
+    console.log(i);
+  }
 }
+
+
+
+
+
+
+
