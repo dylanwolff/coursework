@@ -13,3 +13,17 @@
     //print number
 
   //Modulus - ie 36 % 3 = 0
+
+
+for (i = 1; i < 101; i = i + 1) {
+  if (x % 3 == 0 && x % 5 == 0) {
+    puts "fizzbuzz"
+  }
+  elseif (x % 3 == 0) {
+    puts "fizz"
+  }
+  elseif (x % 5 == 0) {
+    puts "buzz"
+  }
+  else puts x
+}
