@@ -56,10 +56,6 @@ button {
   cursor: pointer;
 }
 
-button:hover {
-  color: #333;
-}
-
 /* Heading */
 h3 {
   color: #333;
