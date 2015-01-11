@@ -1,5 +1,13 @@
 $(document).ready(function() { 
   
+  //Use Enter to submit
+  $("#add-item").keyup(function(event) {
+    if(event.keyCode == 13) {
+      event.preventDefault();
+      $("#add-button").click();
+    };
+  });
+
   //Add item to list
     //Need to add validation so empty items can't be added
   $("#add-button").click(function() {
@@ -10,18 +18,15 @@ $(document).ready(function() {
   });
 
   //Toggle item as completed/incomplete
-    //Need to add event listener for li that don't exist when page loads
-  $("input[type='checkbox']").change(function() {
+    //Event listener for list items that don't exist when the page loads
+  $("ul").on("change", "input[type='checkbox']", function() {
    $(this).closest("li").toggleClass("todo done");
   });
 
-
   //Delete item from list
-    //Need to add event listener for li that don't exist when page loads
-  $(".delete-button").click(function() { 
+    //Event listener for list items that don't exist when the page loads
+  $("ul").on("click", ".delete-button", function() { 
     $(this).parent().remove();
   });
-
-
 
 });
