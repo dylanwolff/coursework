@@ -1,31 +1,37 @@
 $(document).ready(function() { 
   
   //Use Enter to submit
-  $("#add-item").keyup(function(event) {
+  $('#add-item').keyup(function(event) {
     if(event.keyCode == 13) {
       event.preventDefault();
-      $("#add-button").click();
+      $('#add-button').click();
     };
   });
 
   //Add item to list
-    //Need to add validation so empty items can't be added
-  $("#add-button").click(function() {
-    $("ul").append('<li class="todo"><input type="checkbox"><span>' 
-      + $("#add-item").val() 
+    //Add validation so empty items can't be added
+  $('#add-button').click(function() {
+    if( $('#add-item').val().trim().length == 0 ) {
+        $('#add-item').css('border', '1px solid red');
+        $('#add-item').val('');
+    } else { 
+    $('ul').append('<li class="todo"><input type="checkbox"><span>' 
+      + $('#add-item').val() 
       + '</span><button class="delete-button">Delete</button></li>');
-    $("#add-item").val("");
+      $('#add-item').css('border', 'none');
+      $('#add-item').val('');
+    };
   });
 
   //Toggle item as completed/incomplete
     //Event listener for list items that don't exist when the page loads
-  $("ul").on("change", "input[type='checkbox']", function() {
-   $(this).closest("li").toggleClass("todo done");
+  $('ul').on('change', "input[type='checkbox']", function() {
+   $(this).closest('li').toggleClass('todo done');
   });
 
   //Delete item from list
     //Event listener for list items that don't exist when the page loads
-  $("ul").on("click", ".delete-button", function() { 
+  $('ul').on('click', '.delete-button', function() { 
     $(this).parent().remove();
   });
 
