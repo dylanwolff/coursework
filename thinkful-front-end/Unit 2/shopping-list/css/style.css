@@ -1,3 +1,4 @@
+/* Setup Style */
 html {
   background: url('../images/cafetable.jpeg');
   background-size: cover;
@@ -14,7 +15,7 @@ body {
   background:#7f7f7f;
   background:rgba(255,255,255,0.7);
   width: 600px;
-  padding-bottom: 100px;
+  padding-bottom: 75px;
   margin: auto;
 }
 
@@ -24,6 +25,7 @@ body {
   margin: 100px auto 0;
 }
 
+/* List Layout */
 ul {
   margin: 0;
   padding: 0;
@@ -69,6 +71,11 @@ h3 {
   text-transform: uppercase;
 }
 
+/* Add Item */
+.container p {
+  padding-top: 20px;
+}
+
 input[type="text"] {
   margin: 0;
   font-size: 18px;
@@ -80,12 +87,6 @@ input[type="text"] {
   border-radius: 6px;
   font-family: Lato, sans-serif;
   color: #888;
-}
-
-/* Add Item */
-
-.container p {
-  padding-top: 20px;
 }
 
 input#add-item {
