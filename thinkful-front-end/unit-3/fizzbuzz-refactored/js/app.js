@@ -21,7 +21,7 @@ var fizzbuzzer = function () {
     }
 };
  
-fizzbuzzer()
+fizzbuzzer();
 
 
 
