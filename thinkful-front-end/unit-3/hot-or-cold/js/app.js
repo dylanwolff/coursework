@@ -16,44 +16,45 @@ $(document).ready(function(){
       //Add numbers guessed so far to #guesslist
     //Can start a new game by clicking "New Game" button
 
-  //Declare variables
-
+  //VARIABLES
   var randomNumber = 0;
   var guess = 0;
   var guessCount = 0;
-  var guessList = null;
 
 
   //Generate random number
-
-  function getRandomNumber() {
+  function getRandomNumber(){
     randomNumber = parseInt(Math.floor(Math.random()*(100)), 10);
-  };
+    console.log("The random number is " + randomNumber);
+  }
 
+  getRandomNumber();
 
-  //Get guess from user
-
+  //Get guess from user, increment #count and add to #guesslist
+    //Need to add validation (only an integer from 1-100)
   $("form").submit(function(event){
     event.preventDefault();
-      guess = parseInt($('#guess').val(), 10);
+      guess = parseInt($("#userGuess").val(), 10);
+      compareDiff();
+      guessCount++;
+      setCount(guessCount);
+      $("ul#guessList").append("<li>" + guess + "</li>");
   });
 
-
   //Gets whether the difference between randomNumber and guess is +ve or -ve
-
   function compareDiff(){
-    if (guess - randomNumber) > 0 {
+    if (guess - randomNumber > 0) {
         negativeDiff();
+        console.log("The random number is lower than the guess");
     }  else {
         positiveDiff();
+        console.log("The random number is higher than the guess");
     }
-  };
-
+  }
 
   //Runs when difference is positive
-
-  function positiveDiff() {
-    if guess / randomNumber === 1 {
+  function positiveDiff(){
+    if (guess / randomNumber === 1) {
       setFeedback("You're right! Good guess!");
   }  else if ((randomNumber - guess) > 50.5){
         setFeedback("You're ice cold!");
@@ -68,11 +69,9 @@ $(document).ready(function(){
      } 
   }
 
-
   //Runs when difference is negative
-
-  function negativeDiff() {
-    if guess / randomNumber === 1 {
+  function negativeDiff(){
+    if (guess / randomNumber === 1) {
       setFeedback("You're right! Good guess!");
   }  else if ((guess - randomNumber) > 50.5){
         setFeedback("You're ice cold!");
@@ -87,24 +86,34 @@ $(document).ready(function(){
      } 
   }
 
+  //Sets value of #feedback
+  function setFeedback(feedback){
+    $("#feedback").text(feedback);
+  }
 
-  //Add guess to #guesslist
-
-
-  //Increment #count
-
-
-
+  //Counts guesses
+  function setCount(count){
+    $("#count").text(guessCount);
+  }
 
 	/*--- Display information modal box ---*/
   	$(".what").click(function(){
     	$(".overlay").fadeIn(1000);
-
   	});
 
-  	/*--- Hide information modal box ---*/
+  /*--- Hide information modal box ---*/
   	$("a.close").click(function(){
   		$(".overlay").fadeOut(1000);
   	});
+
+  //Start a new game
+  //function newGame(){
+
+  //}
+ 
+  //$(".new").click(function(){
+  //  newGame();
+  //});
+
 });
 
