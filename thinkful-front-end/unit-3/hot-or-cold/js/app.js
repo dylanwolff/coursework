@@ -17,7 +17,7 @@ $(document).ready(function(){
 
   getRandomNumber();
 
-  //Get guess from user, increment #count and add to #guesslist
+  //Get guess from user, increment #count and add to #guessList
   $("form").submit(function(event){
     event.preventDefault();
       guess = parseInt($("#userGuess").val(), 10);
@@ -91,12 +91,12 @@ $(document).ready(function(){
     $("#feedback").text(feedback);
   }
 
-  //Counts guesses
+  //Sets value of #count (number of guesses)
   function setCount(count){
     $("#count").text(guessCount);
   }
 
-  //Start a new game
+  //Setup for a new game
   function newGame(){
     guessCount = 0;
     $("#count").text(guessCount);
@@ -105,10 +105,12 @@ $(document).ready(function(){
     randomNumber = parseInt(Math.floor(Math.random()*(100)), 10);
     console.log("The new random number is " + randomNumber);
   }
- 
+
+  //Start a new game
   $(".new").click(function(){
     newGame();
   });
+
 
 	/*--- Display information modal box ---*/
   	$(".what").click(function(){
