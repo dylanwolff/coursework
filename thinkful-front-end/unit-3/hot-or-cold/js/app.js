@@ -1,13 +1,11 @@
-
 $(document).ready(function(){
-	
+  
   //Need to indent code correctly
 
   //VARIABLES
   var randomNumber = 0;
   var guess = 0;
   var guessCount = 0;
-
 
   //Generate random number
   function getRandomNumber(){
@@ -31,7 +29,7 @@ $(document).ready(function(){
   /*
   //Validate user input
   function validate(){
-    if(isNan(guess)){
+    if(isNaN(guess)){
       alert("Enter a number from 1 to 100");
     } else if(guess === ""){
       alert("Enter a number from 1 to 100"); 
@@ -45,10 +43,8 @@ $(document).ready(function(){
   function compareDiff(){
     if (guess - randomNumber > 0) {
       negativeDiff();
-      console.log("The random number is lower than the guess");
     } else {
         positiveDiff();
-        console.log("The random number is higher than the guess");
     }
   }
 
@@ -111,16 +107,14 @@ $(document).ready(function(){
     newGame();
   });
 
-
-	/*--- Display information modal box ---*/
-  	$(".what").click(function(){
-    	$(".overlay").fadeIn(1000);
-  	});
+  /*--- Display information modal box ---*/
+  $(".what").click(function(){
+    $(".overlay").fadeIn(1000);
+  });
 
   /*--- Hide information modal box ---*/
-  	$("a.close").click(function(){
-  		$(".overlay").fadeOut(1000);
-  	});
+  $("a.close").click(function(){
+    $(".overlay").fadeOut(1000);
+  });
 
 });
-
