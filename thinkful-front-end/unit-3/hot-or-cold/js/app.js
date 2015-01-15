@@ -5,75 +5,57 @@ $(document).ready(function() {
   var guess = 0;
   var guessCount = 0;
 
+  /*--- Display information modal box ---*/
+  $(".what").click(function() {
+    $(".overlay").fadeIn(1000);
+  });
+
+  /*--- Hide information modal box ---*/
+  $("a.close").click(function() {
+    $(".overlay").fadeOut(1000);
+  });
+
   //Generate random number
   function getRandomNumber() {
-    randomNumber = parseInt(Math.floor(Math.random() * (100)), 10);
+    randomNumber = parseInt(Math.floor(Math.random() * (100) + 1), 10);
     console.log("The random number is " + randomNumber);
   }
 
   getRandomNumber();
 
-  //Get guess from user, increment #count and add to #guessList
+  //Get guess from user, validate, increment #count and add to #guessList
   $("form").submit(function(event) {
     event.preventDefault();
     guess = parseInt($("#userGuess").val(), 10);
-    compareDiff();
-    guessCount++;
-    setCount(guessCount);
-    $("ul#guessList").append("<li>" + guess + "</li>");
-    $("#userGuess").val("");
+    if (isNaN(guess)) {
+      alert("Enter a number from 1 to 100");
+      $("#userGuess").val("");
+    } else if (guess === "") {
+      alert("Enter a number from 1 to 100");
+      $("#userGuess").val("");
+    } else if (guess < 1 || guess > 100) {
+      alert("Enter a number from 1 to 100")
+      $("#userGuess").val("");
+    } else {
+      compareDiff();
+      guessCount++;
+      setCount(guessCount);
+      $("ul#guessList").append("<li>" + guess + "</li>");
+      $("#userGuess").val("");
+    }
   });
 
-  /*
-  //Validate user input
-  function validate(){
-    if(isNaN(guess)){
-      alert("Enter a number from 1 to 100");
-    } else if(guess === ""){
-      alert("Enter a number from 1 to 100"); 
-    } else if(guess < 0 || guess > 100){
-      alert("Enter a number from 1 to 100")
-    }
-  }
-  */
-
-  //Gets whether the difference between randomNumber and guess is +ve or -ve
+  //Compare randomNumber and guess
   function compareDiff() {
-    if (guess - randomNumber > 0) {
-      negativeDiff();
-    } else {
-      positiveDiff();
-    }
-  }
-
-  //Runs when difference is positive
-  function positiveDiff() {
     if (guess / randomNumber === 1) {
       setFeedback("You're right! Good guess!");
-    } else if ((randomNumber - guess) > 50.5) {
+    } else if (Math.abs(randomNumber - guess) > 50.5) {
       setFeedback("You're ice cold!");
-    } else if ((randomNumber - guess) > 30.5) {
+    } else if (Math.abs(randomNumber - guess) > 30.5) {
       setFeedback("You're cold!");
-    } else if ((randomNumber - guess) > 20.5) {
+    } else if (Math.abs(randomNumber - guess) > 20.5) {
       setFeedback("You're warm!");
-    } else if ((randomNumber - guess) > 10.5) {
-      setFeedback("You're hot!");
-    } else {
-      setFeedback("You're very hot!");
-    }
-  }
-
-  //Runs when difference is negative
-  function negativeDiff() {
-    if (guess / randomNumber === 1) {
-      setFeedback("You're right! Good guess!");
-    } else if ((guess - randomNumber) > 50.5) {
-      setFeedback("You're ice cold!");
-    } else if ((guess - randomNumber) > 30.5) {
-      setFeedback("You're cold!");
-    } else if ((guess - randomNumber) > 20.5) {
-      setFeedback("You're warm!");
-    } else if ((guess - randomNumber) > 10.5) {
+    } else if (Math.abs(randomNumber - guess) > 10.5) {
       setFeedback("You're hot!");
     } else {
       setFeedback("You're very hot!");
@@ -96,23 +78,13 @@ $(document).ready(function() {
     $("#count").text(guessCount);
     $("#userGuess").val("");
     $("#guessList li").remove();
-    randomNumber = parseInt(Math.floor(Math.random() * (100)), 10);
+    randomNumber = parseInt(Math.floor(Math.random() * (100) + 1), 10);
     console.log("The new random number is " + randomNumber);
   }
 
   //Start a new game
   $(".new").click(function() {
     newGame();
-  });
-
-  /*--- Display information modal box ---*/
-  $(".what").click(function() {
-    $(".overlay").fadeIn(1000);
-  });
-
-  /*--- Hide information modal box ---*/
-  $("a.close").click(function() {
-    $(".overlay").fadeOut(1000);
   });
 
 });
