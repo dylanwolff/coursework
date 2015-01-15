@@ -30,9 +30,6 @@ $(document).ready(function() {
     if (isNaN(guess)) {
       alert("Enter a number from 1 to 100");
       $("#userGuess").val("");
-    } else if (guess === "") {
-      alert("Enter a number from 1 to 100");
-      $("#userGuess").val("");
     } else if (guess < 1 || guess > 100) {
       alert("Enter a number from 1 to 100")
       $("#userGuess").val("");
