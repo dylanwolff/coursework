@@ -1,8 +1,9 @@
 $(document).ready(function() {
 
   //Need to add check for whether user has already guessed the number when clicking guess
-  //If user has guessed correctly, make feedback "You already guessed the number. Start a new game!".
-  //Reset feedback on newGame
+    //If user has guessed correctly:
+      //Make feedback "You already guessed the number. Start a new game!".
+      //Reset feedback on newGame
 
   //VARIABLES
   var randomNumber = 0;
