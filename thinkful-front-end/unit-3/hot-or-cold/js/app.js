@@ -1,5 +1,9 @@
 $(document).ready(function() {
 
+  //Need to add check for whether user has already guessed the number when clicking guess
+    //If user has guessed correctly, make feedback "You already guessed the number. Start a new game!".
+      //Reset feedback on newGame
+
   //VARIABLES
   var randomNumber = 0;
   var guess = 0;
@@ -18,7 +22,6 @@ $(document).ready(function() {
   //Generate random number
   function getRandomNumber() {
     randomNumber = parseInt(Math.floor(Math.random() * (100) + 1), 10);
-    console.log("The random number is " + randomNumber);
   }
 
   getRandomNumber();
@@ -59,12 +62,12 @@ $(document).ready(function() {
     }
   }
 
-  //Sets value of #feedback
+  //Set #feedback
   function setFeedback(feedback) {
     $("#feedback").text(feedback);
   }
 
-  //Sets value of #count (number of guesses)
+  //Set #count (number of guesses)
   function setCount(count) {
     $("#count").text(guessCount);
   }
@@ -76,7 +79,6 @@ $(document).ready(function() {
     $("#userGuess").val("");
     $("#guessList li").remove();
     randomNumber = parseInt(Math.floor(Math.random() * (100) + 1), 10);
-    console.log("The new random number is " + randomNumber);
   }
 
   //Start a new game
