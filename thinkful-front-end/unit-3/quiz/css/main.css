@@ -1,6 +1,6 @@
 /* Setup Style */
 html {
-  background: url('../images/arecamomentsairport1.jpg');
+  background: url('../images/Beijing-International-Capital-Airport-Seats-Window-Terminal-3.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   min-height: 100%;
@@ -21,7 +21,7 @@ p {
 .overlay {
   display: block;
   background:#7f7f7f;
-  background:rgba(255,255,255,0.7);
+  background:rgba(255,255,255,0.9);
   width: 600px;
   margin: auto;
 }
@@ -36,14 +36,14 @@ p {
 /* Header */
 
 .header {
-  margin-top: 50px;
+  margin-top: 75px;
 }
 
 .header h1 {
   font-size: 3.75em;
   margin-top: 1em;
   font-weight: 700;
-  text-shadow: 2px 2px black;
+  text-shadow: 1px 1px black;
   color: white;
 }
 
@@ -51,7 +51,7 @@ p {
   font-size: 1.5em;
   margin-top: 0.5em;
   font-weight: 300;
-  text-shadow: 2px 2px black;
+  text-shadow: 1px 1px black;
   color: white;
 }
 
@@ -69,12 +69,9 @@ p {
   text-align: left;
 }
 
-.answers li {
-  margin-bottom: 1em;
-}
-
 .answers input {
   margin-right: 20px;
+  margin-bottom: 1em;
 }
 
 /* Feedback */
