@@ -90,6 +90,10 @@ p {
   color: #0FC57C;
 }
 
+.correct, .incorrect, .totalscore {
+  display: none;
+}
+
 /* Nav Arrow*/
 
 .navarrow {
