@@ -1,10 +1,36 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Document</title>
+  <title>Frequent Flyer Challenge</title>
+  <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/main.css">
+  <script src="https://code.jquery.com/jquery.min.js"></script>
+  <script src="js/app.js"></script>
 </head>
 <body>
-  
+  <span class="overlay">
+  <div class="container">
+    <h1>Frequent Flyer Challenge</h1>
+    <p>You spend a lot of time in the air, but how much do you really know about flying?</p>
+    <section class="question">
+      <p>What is the longest commercial air route (by distance) in the world?</p>
+    </section>
+    <section class="answers">
+      <ul>
+        <li><input type="radio"></li>
+        <li><input type="radio"></li>
+        <li><input type="radio"></li>
+        <li><input type="radio"></li>
+        <li><input type="radio"></li>
+      </ul>
+    </section>
+    <section class="feedback">
+      <p class="correct">That's right, nice work!<p>
+      <p class="incorrect">Sorry, that's incorrect!<p>
+      <p class="totalscore">You got 3 out 5 correct!</p>
+    </section>
+  </div>
 </body>
 </html>

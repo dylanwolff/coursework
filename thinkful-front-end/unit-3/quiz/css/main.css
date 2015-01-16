@@ -1,0 +1,64 @@
+/* Setup Style */
+html {
+  background: url('../images/cloudslrg.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 100%;
+}
+
+body { 
+  font-family: Lato, sans-serif;
+}
+
+/* Overlay */
+
+.overlay {
+  display: block;
+  background:#7f7f7f;
+  background:rgba(255,255,255,0.7);
+  width: 600px;
+  padding-bottom: 25px;
+  margin: auto;
+  text-align: center;
+}
+
+.container {
+  display: block;
+  width: 500px;
+  margin: 100px auto 0;
+}
+
+h1 {
+  font-size: 2.5em;
+  padding-top: 1em;
+}
+
+p {
+  font-size: 1.25em;
+  padding-top: 1.25em;
+}
+
+/* Question */
+
+
+/* Answers */
+
+.answers {
+  padding-top: 2.5em;
+  text-align: left;
+}
+
+.answers li {
+  padding-bottom: 1em;
+}
+
+/* Feedback */
+
+.incorrect {
+  color: #CF2323;
+}
+
+.correct {
+  color: #0FC57C;
+}
+
