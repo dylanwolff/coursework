@@ -7,9 +7,10 @@ html {
 }
 
 body { 
-  font-family: 'Roboto', sans-serif;
-  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
   color: black;
+  text-align: center;
 }
 
 p {
@@ -30,7 +31,7 @@ p {
   display: block;
   width: 500px;
   margin: 50px auto 0;
-  padding: 20px 0;
+  padding: 30px 0;
 }
 
 /* Header */
@@ -40,16 +41,18 @@ p {
 }
 
 .header h1 {
-  font-size: 3.75em;
   margin-top: 1em;
+  font-family: 'Roboto', sans-serif;
+  font-size: 3.75em;
   font-weight: 700;
   text-shadow: 1px 1px black;
   color: white;
 }
 
 .header p {
-  font-size: 1.5em;
   margin-top: 0.5em;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.5em;
   font-weight: 300;
   text-shadow: 1px 1px black;
   color: white;
@@ -61,11 +64,10 @@ p {
   font-weight: 400;
 }
 
-
 /* Answers */
 
 .answers {
-  margin-top: 2.5em;
+  margin-top: 1.75em;
   text-align: left;
 }
 
