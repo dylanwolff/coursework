@@ -1,6 +1,6 @@
 /* Setup Style */
 html {
-  background: url('../images/cloudslrg.jpg');
+  background: url('../images/arecamomentsairport1.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   min-height: 100%;
@@ -9,6 +9,7 @@ html {
 body { 
   font-family: 'Roboto', sans-serif;
   text-align: center;
+  color: black;
 }
 
 p {
@@ -42,22 +43,22 @@ p {
   font-size: 3.75em;
   margin-top: 1em;
   font-weight: 700;
+  text-shadow: 2px 2px black;
   color: white;
-  text-shadow: 1px 1px gray;
 }
 
 .header p {
   font-size: 1.5em;
   margin-top: 0.5em;
   font-weight: 300;
+  text-shadow: 2px 2px black;
   color: white;
-  text-shadow: 1px 1px gray;
 }
 
 /* Question */
 
 .question p {
-  font-weight: 500;
+  font-weight: 400;
 }
 
 
