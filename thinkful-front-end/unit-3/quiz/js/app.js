@@ -14,10 +14,37 @@ $(document).ready(function() {
 var currentQuestion = 0;
 var numberCorrect = 0;
 
-
 //Question & answer array
-
-
+var questions = [{
+  question: "",
+  choices: [],
+  qNum : 0,
+  correct : 0,
+  },
+  {
+  question: "",
+  choices: [],
+  qNum : 1,
+  correct : 0,
+  },
+  {
+  question: "",
+  choices: [],
+  qNum : 2,
+  correct : 0,
+  },
+  {
+  question: "",
+  choices: [],
+  qNum : 3,
+  correct : 0,
+  },
+  {
+  question: "",
+  choices: [],
+  qNum : 4,
+  correct : 0,
+  }]
 
 //Submit answer on .answers change 
   $('input[name=answers]').change(function() {
