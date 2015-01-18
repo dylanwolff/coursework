@@ -34,7 +34,7 @@ var questions = [{
   correct : 3,
   },
   {
-  question: "What is the maximum certified passenger capacity for the Airbus A380-800 in a one-class configuration?",
+  question: "What is the certified maximum passenger capacity for the Airbus A380-800 in a one-class configuration?",
   choices: ["585", "675", "736", "810", "853"],
   qNum : 3,
   correct : 4,
@@ -46,18 +46,27 @@ var questions = [{
   correct : 0,
   }]
 
+//Change question
+function nextQuestion() {
+  $(".question").append("<p>"+questions[currentQuestion].question+"</p>");
+  $(".answers ul").append("<li><label><input type='radio' name='answers'>"+questions[currentQuestion].choices[0]+"</label></li>");
+  $(".answers ul").append("<li><label><input type='radio' name='answers'>"+questions[currentQuestion].choices[1]+"</label></li>");
+  $(".answers ul").append("<li><label><input type='radio' name='answers'>"+questions[currentQuestion].choices[2]+"</label></li>");
+  $(".answers ul").append("<li><label><input type='radio' name='answers'>"+questions[currentQuestion].choices[3]+"</label></li>");
+  $(".answers ul").append("<li><label><input type='radio' name='answers'>"+questions[currentQuestion].choices[4]+"</label></li>");
+}
+
 //Submit answer on .answers change 
   $('input[name=answers]').change(function() {
     $('form').submit();
     event.preventDefault();
   });
 
+//Check user answer
 
 
 
-
-
-
+//Calculate and show final score
 
 
 
