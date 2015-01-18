@@ -35,9 +35,9 @@ var questions = [{
   },
   {
   question: "What is the maximum certified passenger capacity for the Airbus A380-800 in a one-class configuration?",
-  choices: ["675", "736", "585", "853", "810"],
+  choices: ["585", "675", "736", "810", "853"],
   qNum : 3,
-  correct : 3,
+  correct : 4,
   },
   {
   question: "In what year did the world's first commercial flight with a paying passenger take place?",
