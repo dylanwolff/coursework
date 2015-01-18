@@ -28,7 +28,7 @@ var questions = [{
   correct : 2,
   },
   {
-  question: "During 2013, what was the world's busiest airport by international passenger traffic?",
+  question: "During 2013, what was the world's busiest airport (by international passenger traffic)?",
   choices: ["Hong Kong International Airport (HKG), Hong Kong", "Dubai International Airport (DXB), United Arab Emirates", "Singapore Changi Airport (SIN), Singapore", "London Heathrow Airport (LHR), United Kingdom", "Amsterdam Airport Schipol (AMS), Netherlands"],
   qNum : 2,
   correct : 3,
