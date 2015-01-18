@@ -48,12 +48,12 @@ var questions = [{
 
 //Change question
 function nextQuestion() {
-  $(".question").append("<p>"+questions[currentQuestion].question+"</p>");
-  $(".answers ul").append("<li><label><input type='radio' name='answers'>"+questions[currentQuestion].choices[0]+"</label></li>");
-  $(".answers ul").append("<li><label><input type='radio' name='answers'>"+questions[currentQuestion].choices[1]+"</label></li>");
-  $(".answers ul").append("<li><label><input type='radio' name='answers'>"+questions[currentQuestion].choices[2]+"</label></li>");
-  $(".answers ul").append("<li><label><input type='radio' name='answers'>"+questions[currentQuestion].choices[3]+"</label></li>");
-  $(".answers ul").append("<li><label><input type='radio' name='answers'>"+questions[currentQuestion].choices[4]+"</label></li>");
+  $("#question").append("<p>"+questions[currentQuestion].question+"</p>");
+  $("#answers ul").append("<li><label><input type='radio' name='answers'>"+questions[currentQuestion].choices[0]+"</label></li>");
+  $("#answers ul").append("<li><label><input type='radio' name='answers'>"+questions[currentQuestion].choices[1]+"</label></li>");
+  $("#answers ul").append("<li><label><input type='radio' name='answers'>"+questions[currentQuestion].choices[2]+"</label></li>");
+  $("#answers ul").append("<li><label><input type='radio' name='answers'>"+questions[currentQuestion].choices[3]+"</label></li>");
+  $("#answers ul").append("<li><label><input type='radio' name='answers'>"+questions[currentQuestion].choices[4]+"</label></li>");
 }
 
 //Submit answer on .answers change 
