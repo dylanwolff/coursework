@@ -65,19 +65,21 @@ $(document).ready(function() {
   addQuestion();
 
   //Submit answer on #button click, check answer, show appropriate feedback
-  $("#button").on("click", function() {
+  $("#submit").on("click", function() {
     $('form').submit();
-    console.log("answer submitted");
       var answer = $("input:radio[name='answers']:checked").val();
     if (answer == questions[currentQuestion].correct) {
       numberCorrect++;
       $("#correct").show();
-      console.log("Correct answer");
+      $("#incorrect").hide();
     } else {
       $("#incorrect").show();
-      console.log("Incorrect answer");
+      $("#correct").hide();
     }
   });
+
+  //Need to prevent user being able to change their answer once #submit is clicked
+  
 
   //On #navarrow click, remove previous question and answers, increment question number, 
   //add new question and answers, show total score after last question
@@ -95,5 +97,9 @@ $(document).ready(function() {
       $("#feedback").show().append('<p id="totalscore">You got '+numberCorrect+' out of 5 correct!</p>');
     }
   })
+
+  //After total score is displayed, next click on #navarrow resets quiz to start over 
+
+
 
 });

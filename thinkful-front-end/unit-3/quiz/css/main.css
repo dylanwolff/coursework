@@ -1,6 +1,6 @@
 /* Common */
 html {
-  background: url('../images/Beijing-International-Capital-Airport-Seats-Window-Terminal-3.jpg');
+  background: url('../images/terminal_window.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   min-height: 100%;
@@ -24,6 +24,7 @@ p {
   background:#7f7f7f;
   background:rgba(255,255,255,0.9);
   width: 600px;
+  height: 430px;
   margin: auto;
 }
 
@@ -78,16 +79,17 @@ p {
 
 /* Button */
 
-#submit {
+#button #submit {
   font-family: 'Open Sans', sans-serif;
   font-size: 1em;
-  margin-top: 20px;
+  margin-top: 30px;
+  width: 150px;
 }
 
 /* Feedback */
 
 #feedback {
-  margin-top: 40px;
+  margin-top: 30px;
 }
 
 #incorrect {
