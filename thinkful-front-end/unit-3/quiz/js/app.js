@@ -74,14 +74,11 @@ $(document).ready(function() {
 
   addQuestion();
 
-  //Submit answer on #button click
+  //Submit answer on #button click, check answer
   $("#button").on("click", function() {
     $('form').submit();
     console.log("answer submitted");
-  });
-
-  //Check user answer
-  var answer = $("input:radio[name='answers']:checked").val();
+      var answer = $("input:radio[name='answers']:checked").val();
     if (answer == questions[currentQuestion].correct) {
       numberCorrect++;
       $("#correct").show();
@@ -90,6 +87,7 @@ $(document).ready(function() {
       $("#incorrect").show();
       console.log("Incorrect answer");
     }
+  });
 
   //On #navarrow click, remove previous question and answers, increment question no, 
   //add new question and answers, show final score after last question
@@ -99,6 +97,8 @@ $(document).ready(function() {
       $("li").remove("#answers li");
       currentQuestion++;
       addQuestion();
+      $("#incorrect").hide();
+      $("#correct").hide();
     } else {
       $("#totalscore").show();
       $("#incorrect").hide();
