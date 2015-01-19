@@ -76,6 +76,12 @@ p {
   margin-bottom: 1em;
 }
 
+/* Button */
+
+#submit {
+  margin-top: 20px;
+}
+
 /* Feedback */
 
 #feedback {
