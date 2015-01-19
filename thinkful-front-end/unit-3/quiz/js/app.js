@@ -46,8 +46,8 @@ $(document).ready(function() {
     correct : 0,
     }]
 
-  //Change question
-  function nextQuestion() {
+  //Add question
+  function addQuestion() {
     $("#question").append("<p>"+questions[currentQuestion].question+"</p>");
     $("#answers ul").append("<li><label><input type='radio' name='answers'>"+questions[currentQuestion].choices[0]+"</label></li>");
     $("#answers ul").append("<li><label><input type='radio' name='answers'>"+questions[currentQuestion].choices[1]+"</label></li>");
@@ -56,7 +56,9 @@ $(document).ready(function() {
     $("#answers ul").append("<li><label><input type='radio' name='answers'>"+questions[currentQuestion].choices[4]+"</label></li>");
   }
 
-  //Submit answer on .answers change 
+  addQuestion();
+
+  //Submit answer on #answers change 
     $('input[name=answers]').change(function() {
       $('form').submit();
       event.preventDefault();
@@ -65,6 +67,14 @@ $(document).ready(function() {
   //Check user answer
 
 
+  //On #navarrow click, remove previous question and answers, increment question no, add new question and answers
+    $("#navarrow i").on("click", function() {
+      $("p").remove("#question p");
+      $("li").remove("#answers li");
+      currentQuestion++;
+      addQuestion();
+    });
+  
 
   //Calculate and show final score
 
