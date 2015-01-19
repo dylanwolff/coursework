@@ -98,7 +98,7 @@ p {
   color: #0FC57C;
 }
 
-#correct, #incorrect, #totalscore {
+#correct, #incorrect {
   display: none;
 }
 

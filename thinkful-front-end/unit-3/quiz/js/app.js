@@ -80,7 +80,7 @@ $(document).ready(function() {
   });
 
   //On #navarrow click, remove previous question and answers, increment question number, 
-  //add new question and answers, show final score after last question
+  //add new question and answers, show total score after last question
   $("#navarrow i").on("click", function() {
     if (currentQuestion < 4) {
       $("p").remove("#question p");
@@ -92,9 +92,8 @@ $(document).ready(function() {
     } else {
       $("#incorrect").hide();
       $("#correct").hide();
-      //Change to show "You got" + numberCorrect + "out of 5 correct!"
-      $("#totalscore").show();
+      $("#feedback").show().append('<p id="totalscore">You got '+numberCorrect+' out of 5 correct!</p>');
     }
-  });
+  })
 
 });
