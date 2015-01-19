@@ -1,13 +1,3 @@
-//.correct, .incorrect and .totalscore all start hidden
-//User selects answer
-//Submit on change
-//Appropriate class in feedback shows based on whether answer is correct/incorrect
-//User clicks arrow to move to next question
-//New question replaces value in .question (remove()/replace()?)
-//New answers replace values in .answers ul
-//When user submits response to final question (#5), .totalscore shows
-//Next arrow becomes new game link/button
-
 $(document).ready(function() {
 
   //VARIABLES
@@ -62,7 +52,7 @@ $(document).ready(function() {
       correct: 0
   }]
 
-  //Add question
+  //Add question and answers
   function addQuestion() {
     $("#question").append("<p>" + questions[currentQuestion].question + "</p>");
     $("#answers ul").append("<li><label><input type='radio' name='answers' value='0'>" + questions[currentQuestion].choices[0] + "</label></li>");
@@ -74,7 +64,7 @@ $(document).ready(function() {
 
   addQuestion();
 
-  //Submit answer on #button click, check answer
+  //Submit answer on #button click, check answer, show appropriate feedback
   $("#button").on("click", function() {
     $('form').submit();
     console.log("answer submitted");
@@ -89,7 +79,7 @@ $(document).ready(function() {
     }
   });
 
-  //On #navarrow click, remove previous question and answers, increment question no, 
+  //On #navarrow click, remove previous question and answers, increment question number, 
   //add new question and answers, show final score after last question
   $("#navarrow i").on("click", function() {
     if (currentQuestion < 4) {
@@ -100,9 +90,10 @@ $(document).ready(function() {
       $("#incorrect").hide();
       $("#correct").hide();
     } else {
-      $("#totalscore").show();
       $("#incorrect").hide();
       $("#correct").hide();
+      //Change to show "You got" + numberCorrect + "out of 5 correct!"
+      $("#totalscore").show();
     }
   });
 
