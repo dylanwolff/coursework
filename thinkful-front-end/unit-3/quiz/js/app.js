@@ -67,6 +67,10 @@ $(document).ready(function() {
   });
 
   //After total score is displayed, next click on #navarrow resets quiz to start over 
+  //NB Not working!
+  $("#retry i").on("click", function() {
+    location.reload();
+  });
 
   //Functions
   function addQuestion() {
@@ -103,6 +107,7 @@ $(document).ready(function() {
       $("#incorrect").hide();
       $("#correct").hide();
       $("#feedback").show().append('<p id="totalscore">You got '+numberCorrect+' out of 5 correct!</p>');
+      $("#navarrow").attr("id", "retry");
     }
   }
 
