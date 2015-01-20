@@ -7,29 +7,29 @@ $(document).ready(function() {
   //Question and answer array
   var questions = [{
       question: "What is the longest commercial passenger route in the world (by distance)?",
-      choices: ["Sydney, Australia (SYD) to Dallas-Fort Worth, United States (DFW)",
-                "London Heathrow, United Kingdom (LHR) to Singapore (SIN)",
+      choices: ["Beijing, China (PEK) to Chicago, United States (ORD)",
                 "Dubai, United Arab Emirates (DXB) to Sydney, Australia (SYD)",
-                "Tokyo Narita, Japan (NRT) to San Francisco, United States (SFO)",
-                "Beijing, China (PEK) to Chicago, United States (ORD)"],
+                "London Heathrow, United Kingdom (LHR) to Singapore (SIN)",
+                "Sydney, Australia (SYD) to Dallas-Fort Worth, United States (DFW)",
+                "Tokyo Narita, Japan (NRT) to San Francisco, United States (SFO)"],
       qNum: 0,
-      correct: 0
+      correct: 3
   },  {  
       question: "Which of the following has the largest wingspan?",
       choices: ["Airbus A340-600",
                 "Boeing 747-400ER",
                 "Boeing 777-200LR",
-                "Boeing 787-9",
-                "Boeing 767-300"],
+                "Boeing 767-300",
+                "Boeing 787-9"],
       qNum: 1,
       correct: 2
   },  {  
       question: "During 2013, what was the world's busiest airport (by international passenger traffic)?",
-      choices: ["Hong Kong International Airport (HKG), Hong Kong",
+      choices: ["Amsterdam Airport Schipol (AMS), Netherlands",
                 "Dubai International Airport (DXB), United Arab Emirates",
-                "Singapore Changi Airport (SIN), Singapore",
+                "Hong Kong International Airport (HKG), Hong Kong",
                 "London Heathrow Airport (LHR), United Kingdom",
-                "Amsterdam Airport Schipol (AMS), Netherlands"],
+                "Singapore Changi Airport (SIN), Singapore"],
       qNum: 2,
       correct: 3
   },  {
