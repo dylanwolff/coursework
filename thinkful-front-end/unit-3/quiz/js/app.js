@@ -62,14 +62,9 @@ $(document).ready(function() {
 
   //On #navarrow click, remove previous question and answers, increment question number 
   //Add new question and answers, show total score after last question
+  //Reload on next click of #navarrow/#retry after total score is shown
   $("#navarrow i").on("click", function() {
     nextQuestion();
-  });
-
-  //After total score is displayed, next click on #navarrow resets quiz to start over 
-  //NB Not working!
-  $("#retry i").on("click", function() {
-    location.reload();
   });
 
   //Functions
@@ -108,7 +103,9 @@ $(document).ready(function() {
       $("#correct").hide();
       $("#feedback").show().append('<p id="totalscore">You got '+numberCorrect+' out of 5 correct!</p>');
       $("#navarrow").attr("id", "retry");
+      $("#retry i").click(function() {
+        location.reload();
+      })
     }
   }
-
 });
