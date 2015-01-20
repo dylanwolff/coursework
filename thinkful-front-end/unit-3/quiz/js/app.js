@@ -55,7 +55,7 @@ $(document).ready(function() {
   //Setup quiz with question 0
   addQuestion();
 
-  //Submit answer on #button click, check answer, show appropriate feedback
+  //Submit answer on #submit click, check answer, show appropriate feedback
   $("#submit").on("click", function() {
     submitCheck();
   });
