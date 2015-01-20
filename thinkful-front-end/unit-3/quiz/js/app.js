@@ -4,7 +4,7 @@ $(document).ready(function() {
   var currentQuestion = 0;
   var numberCorrect = 0;
 
-  //Question & answer array
+  //Question and answer array
   var questions = [{
       question: "What is the longest commercial passenger route in the world (by distance)?",
       choices: ["Sydney, Australia (SYD) to Dallas-Fort Worth, United States (DFW)",
@@ -52,7 +52,23 @@ $(document).ready(function() {
       correct: 0
   }]
 
-  //Add question and answers
+  //Setup quiz with question 0
+  addQuestion();
+
+  //Submit answer on #button click, check answer, show appropriate feedback
+  $("#submit").on("click", function() {
+    submitCheck();
+  });
+
+  //On #navarrow click, remove previous question and answers, increment question number 
+  //Add new question and answers, show total score after last question
+  $("#navarrow i").on("click", function() {
+    nextQuestion();
+  });
+
+  //After total score is displayed, next click on #navarrow resets quiz to start over 
+
+  //Functions
   function addQuestion() {
     $("#question").append("<p>" + questions[currentQuestion].question + "</p>");
     $("#answers ul").append("<li><label><input type='radio' name='answers' value='0'>" + questions[currentQuestion].choices[0] + "</label></li>");
@@ -61,12 +77,8 @@ $(document).ready(function() {
     $("#answers ul").append("<li><label><input type='radio' name='answers' value='3'>" + questions[currentQuestion].choices[3] + "</label></li>");
     $("#answers ul").append("<li><label><input type='radio' name='answers' value='4'>" + questions[currentQuestion].choices[4] + "</label></li>");
   }
-
-  addQuestion();
-
-  //Submit answer on #button click, check answer, show appropriate feedback
+  
   function submitCheck() {
-  $("#submit").on("click", function() {
     $('form').submit();
       var answer = $("input:radio[name='answers']:checked").val();
     if (answer == questions[currentQuestion].correct) {
@@ -77,16 +89,9 @@ $(document).ready(function() {
       $("#incorrect").show();
       $("#correct").hide();
     }
-  })
   }
 
-  submitCheck();
-
-  //Need to prevent user being able to change their answer once #submit is clicked add new question and answers
-
-  //On #navarrow click, remove previous question and answers, increment question number, 
-  //add new question and answers, show total score after last question
-  $("#navarrow i").on("click", function() {
+  function nextQuestion() {
     if (currentQuestion < 4) {
       $("p").remove("#question p");
       $("li").remove("#answers li");
@@ -99,10 +104,6 @@ $(document).ready(function() {
       $("#correct").hide();
       $("#feedback").show().append('<p id="totalscore">You got '+numberCorrect+' out of 5 correct!</p>');
     }
-  })
-
-  //After total score is displayed, next click on #navarrow resets quiz to start over 
-
-
+  }
 
 });
