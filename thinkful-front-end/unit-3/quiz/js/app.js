@@ -56,16 +56,12 @@ $(document).ready(function() {
   addQuestion();
 
   //Submit answer on #submit click, check answer, show appropriate feedback
-  $("#submit").on("click", function() {
-    submitCheck();
-  });
+  $("#submit").on("click", submitCheck);
 
   //On #navarrow click, remove previous question and answers, increment question number 
   //Add new question and answers, show total score after last question
-  //Reload on next click of #navarrow/#retry after total score is shown
-  $("#navarrow i").on("click", function() {
-    nextQuestion();
-  });
+  //After total score is shown, next click on #navarrow/#retry reloads page
+  $(document).on("click", "#navarrow i", nextQuestion);
 
   //Functions
   function addQuestion() {
