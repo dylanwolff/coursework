@@ -106,6 +106,6 @@ p {
 
 /* Nav Arrow*/
 
-#navarrow {
+#navarrow, #retry {
   padding-top: 20px;
 }
