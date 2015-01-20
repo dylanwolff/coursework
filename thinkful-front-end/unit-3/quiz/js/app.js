@@ -65,6 +65,7 @@ $(document).ready(function() {
   addQuestion();
 
   //Submit answer on #button click, check answer, show appropriate feedback
+  function submitCheck() {
   $("#submit").on("click", function() {
     $('form').submit();
       var answer = $("input:radio[name='answers']:checked").val();
@@ -76,10 +77,12 @@ $(document).ready(function() {
       $("#incorrect").show();
       $("#correct").hide();
     }
-  });
+  })
+  }
 
-  //Need to prevent user being able to change their answer once #submit is clicked
-  
+  submitCheck();
+
+  //Need to prevent user being able to change their answer once #submit is clicked add new question and answers
 
   //On #navarrow click, remove previous question and answers, increment question number, 
   //add new question and answers, show total score after last question
