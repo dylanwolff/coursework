@@ -63,8 +63,6 @@ $(document).ready(function() {
   //After total score is shown, next click on #navarrow/#retry reloads page
   $("#next").on("click", nextQuestion);
 
-
-
   //Functions
   function addQuestion() {
     $("#question").append("<p>" + questions[currentQuestion].question + "</p>");
@@ -107,7 +105,6 @@ $(document).ready(function() {
       $("#next").hide();
       $("#tryagain").show();
       $("#feedback").show().append('<p id="totalscore">You got '+numberCorrect+' out of 5 correct!</p>');
-      $("#tryagain").on("click", location.reload());
     }
   }
 });
