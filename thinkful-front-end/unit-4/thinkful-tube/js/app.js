@@ -1,16 +1,33 @@
-$(document).ready(function(){
-
-  $.getJSON('http://www.omdbapi.com/?s=Star%20Wars&r=json', function(data){
-    myData = data.Search[0].Title;
-    console.log(myData);
-});
-
-  function showResults(results){
-    var html = "";
-    $.each(results, function(index,value){
-      html += "<p>" + value.Title + "</p>";
-      console.log(value.Title);
-    });
-    $("#search-results").html(html);
+$(document).ready(function() {
+  //Query API
+  function getResults(query) {
+    $.getJSON("https://www.googleapis.com/youtube/v3/search",
+      {
+        "part": "snippet",
+        "key": "AIzaSyDGNutxEIevCGLqDLrQSQ_2rjqvgrGCTQc",
+        "q": query
+      },
+      function (data) {
+        if (data.pageInfo.totalResults == 0) {
+          alert("No videos found");
+        }
+        showResults(data.items);
+      }
+    );
   }
+  //Display results
+  function showResults(videos){
+    var html = "";
+    $.each(videos, function (index,video){
+      html += "<li><p>" + video.snippet.title + 
+      "</p><img src='" + video.snippet.thumbnails.high.url + "'/></li>";
+    });
+    $("#search-results ul").html(html);
+  }
+  
+  $("#search-term").submit(function (event) {
+    event.preventDefault();
+    getResults($("#query").val());
+  });
+
 })
