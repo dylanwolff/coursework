@@ -58,9 +58,8 @@ $(document).ready(function() {
   //Submit answer on #submit click, check answer, show appropriate feedback
   $("#submit").on("click", submitCheck);
 
-  //On #navarrow click, remove previous question and answers, increment question number 
+  //On #next click, remove previous question and answers, increment question number 
   //Add new question and answers, show total score after last question
-  //After total score is shown, next click on #navarrow/#retry reloads page
   $("#next").on("click", nextQuestion);
 
   //Functions
