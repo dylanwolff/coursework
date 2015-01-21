@@ -18,7 +18,6 @@ p {
 }
 
 /* Overlay */
-
 #overlay {
   display: block;
   background:#7f7f7f;
@@ -36,7 +35,6 @@ p {
 }
 
 /* Header */
-
 #header {
   margin-top: 75px;
 }
@@ -60,13 +58,11 @@ p {
 }
 
 /* Question */
-
 #question p {
   font-weight: 400;
 }
 
 /* Answers */
-
 #answers {
   margin-top: 1.75em;
   text-align: left;
@@ -77,8 +73,7 @@ p {
   margin-bottom: 1em;
 }
 
-/* Button */
-
+/* Buttons */
 #submit, #next, #tryagain {
   font-family: 'Open Sans', sans-serif;
   font-size: 1em;
@@ -91,7 +86,6 @@ p {
 }
 
 /* Feedback */
-
 #feedback {
   margin-top: 30px;
 }
@@ -106,10 +100,4 @@ p {
 
 #correct, #incorrect {
   display: none;
-}
-
-/* Nav Arrow*/
-
-#navarrow, #retry {
-  padding-top: 20px;
 }
