@@ -61,7 +61,9 @@ $(document).ready(function() {
   //On #navarrow click, remove previous question and answers, increment question number 
   //Add new question and answers, show total score after last question
   //After total score is shown, next click on #navarrow/#retry reloads page
-  $(document).on("click", "#navarrow i", nextQuestion);
+  $("#next").on("click", nextQuestion);
+
+
 
   //Functions
   function addQuestion() {
@@ -76,6 +78,8 @@ $(document).ready(function() {
   function submitCheck() {
     $('form').submit();
       var answer = $("input:radio[name='answers']:checked").val();
+      $("#submit").hide();
+      $("#next").show();
     if (answer == questions[currentQuestion].correct) {
       numberCorrect++;
       $("#correct").show();
@@ -94,14 +98,16 @@ $(document).ready(function() {
       addQuestion();
       $("#incorrect").hide();
       $("#correct").hide();
+      $("#submit").show();
+      $("#next").hide();
     } else {
       $("#incorrect").hide();
       $("#correct").hide();
+      $("#submit").hide();
+      $("#next").hide();
+      $("#tryagain").show();
       $("#feedback").show().append('<p id="totalscore">You got '+numberCorrect+' out of 5 correct!</p>');
-      $("#navarrow").attr("id", "retry");
-      $("#retry i").click(function() {
-        location.reload();
-      })
+      $("#tryagain").on("click", location.reload());
     }
   }
 });

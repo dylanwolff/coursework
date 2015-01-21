@@ -24,7 +24,7 @@ p {
   background:#7f7f7f;
   background:rgba(255,255,255,0.9);
   width: 600px;
-  height: 430px;
+  height: 380px;
   margin: auto;
 }
 
@@ -79,11 +79,15 @@ p {
 
 /* Button */
 
-#button #submit {
+#submit, #next, #tryagain {
   font-family: 'Open Sans', sans-serif;
   font-size: 1em;
   margin-top: 30px;
   width: 150px;
+}
+
+#next, #tryagain {
+  display: none;
 }
 
 /* Feedback */
