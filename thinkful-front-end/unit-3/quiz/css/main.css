@@ -75,10 +75,9 @@ p {
 
 /* Buttons */
 #submit, #next, #tryagain {
-  font-family: 'Open Sans', sans-serif;
   font-size: 1em;
   margin-top: 30px;
-  width: 150px;
+  width: 150px;  
 }
 
 #next, #tryagain {
