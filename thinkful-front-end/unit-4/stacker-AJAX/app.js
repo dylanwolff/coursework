@@ -6,6 +6,17 @@ $(document).ready( function() {
 		var tags = $(this).find("input[name='tags']").val();
 		getUnanswered(tags);
 	});
+
+	//Begin my code//
+	$('.inspiration-getter').submit( function(event){
+		// zero out results if previous search has run
+		$('.results').html('');
+		// get the value of the tags the user submitted
+		var answerers = $(this).find("input[name='answerers']").val();
+		getInspiration(answerers);
+	});
+	//End my code//
+
 });
 
 // this function takes the question object returned by StackOverflow 
@@ -88,5 +99,62 @@ var getUnanswered = function(tags) {
 	});
 };
 
+//Begin my code
+var showAnswerer = function(answer) {
+	
+	// clone our result template code
+	var result = $('.templates .answerers').clone();
+	// Show user name in result
+	var userName = result.find('.user-name a');
+	userName.attr('href', answer.user.link);
+	userName.text(answer.user.display_name);
 
+	return result;
+};
+
+// this function takes the results object from StackOverflow
+// and creates info about search results to be appended to DOM
+var showSearchResults = function(query, resultNum) {
+	var results = resultNum + ' results for <strong>' + query;
+	return results;
+};
+
+// takes error string and turns it into displayable DOM element
+var showError = function(error){
+	var errorElem = $('.templates .error').clone();
+	var errorText = '<p>' + error + '</p>';
+	errorElem.append(errorText);
+};
+
+// takes a string of semi-colon separated tags to be searched
+// for on StackOverflow
+var getInspiration = function(answerers) {
+	
+	// the parameters we need to pass in our request to StackOverflow's API
+	var request = {tag: answerers,
+								site: 'stackoverflow'};
+	
+	var result = $.ajax({
+		url: "http://api.stackexchange.com/2.2/tags/"+request.tag+"/top-answerers/all_time",
+		data: request,
+		dataType: "jsonp",
+		type: "GET",
+		})
+	.done(function(result){
+		var searchResults = showSearchResults(request.tag, result.items.length);
+
+		$('.search-results').html(searchResults);
+
+		$.each(result.items, function(i, item) {
+			var answer = showAnswerer(item);
+			$('.results').append(answer);
+		});
+	})
+	.fail(function(jqXHR, error, errorThrown){
+		var errorElem = showError(error);
+		$('.search-results').append(errorElem);
+	});
+};
+
+//End my code//
 
