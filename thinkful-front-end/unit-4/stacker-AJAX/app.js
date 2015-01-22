@@ -51,7 +51,6 @@ var showQuestion = function(question) {
   return result;
 };
 
-
 // this function takes the results object from StackOverflow
 // and creates info about search results to be appended to DOM
 var showSearchResults = function(query, resultNum) {
@@ -104,10 +103,16 @@ var showAnswerer = function(answer) {
 
   // clone our result template code
   var result = $('.templates .answerers').clone();
-  // Show user name in result
+  // show user image
+  var userImage = result.find('.user-image');
+	userImage.attr('src', answer.user.profile_image);
+  // show user display name
   var userName = result.find('.user-name a');
   userName.attr('href', answer.user.link);
   userName.text(answer.user.display_name);
+  // show user reputation
+  var userReputation = result.find('.user-reputation');
+	userReputation.text(answer.user.reputation);
 
   return result;
 };
