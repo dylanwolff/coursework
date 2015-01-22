@@ -7,7 +7,6 @@ $(document).ready( function() {
 		getUnanswered(tags);
 	});
 
-	//Begin my code//
 	$('.inspiration-getter').submit( function(event){
 		// zero out results if previous search has run
 		$('.results').html('');
@@ -15,7 +14,6 @@ $(document).ready( function() {
 		var answerers = $(this).find("input[name='answerers']").val();
 		getInspiration(answerers);
 	});
-	//End my code//
 
 });
 
@@ -99,7 +97,6 @@ var getUnanswered = function(tags) {
 	});
 };
 
-//Begin my code
 var showAnswerer = function(answer) {
 	
 	// clone our result template code
@@ -156,5 +153,4 @@ var getInspiration = function(answerers) {
 	});
 };
 
-//End my code//
 
