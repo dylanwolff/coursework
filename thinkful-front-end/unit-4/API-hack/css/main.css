@@ -12,11 +12,12 @@ html, body {
 #map-canvas {
   width: 60%;
   height: 60%;
-  margin: 0 auto;
+  margin: 0 auto 25px auto;
 }
 
 #header h1 {
   font-family: 'Roboto', sans-serif;
+  font-weight: 500;
   font-size: 2.5em;
   margin-top: 30px;
 }
@@ -30,4 +31,13 @@ html, body {
 
 #search {
   margin-bottom: 25px;
+}
+
+#footer img {
+  vertical-align: -65%;
+}
+
+#footer p {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1em;
 }
