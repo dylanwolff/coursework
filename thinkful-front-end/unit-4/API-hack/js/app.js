@@ -15,10 +15,10 @@ function initialize() {
       var pos = new google.maps.LatLng(position.coords.latitude,
                                        position.coords.longitude);
 
-      var infowindow = new google.maps.InfoWindow({
+      var marker = new google.maps.Marker({
         map: map,
         position: pos,
-        content: 'Location found using HTML5.'
+        title: 'My location'
       });
 
       map.setCenter(pos);
@@ -49,7 +49,3 @@ function handleNoGeolocation(errorFlag) {
 }
 
 google.maps.event.addDomListener(window, 'load', initialize);
-
-
-
-
