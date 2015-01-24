@@ -1,4 +1,4 @@
-// Google Maps setup //
+// Google Maps code //
 
 var map;
 
@@ -49,3 +49,47 @@ function handleNoGeolocation(errorFlag) {
 }
 
 google.maps.event.addDomListener(window, 'load', initialize);
+
+
+// Foursquare code //
+
+//Need to take lat & long from geolocation and feed into API request
+var latitude = -37.813761;
+var longitude = 144.963335;
+var ll = latitude + "," + longitude;
+
+//Returns recommended "burger joint" venues
+$.getJSON("https://api.foursquare.com/v2/venues/explore", {
+  ll: ll,
+  radius: 1000,
+  query: "burger joint",
+  limit: 20,
+  time: "any",
+  day: "any",
+  client_id: "IWVYEGXHSXRTHD3YH432S4V3UGM1CJ1MGLA5Y4BFMISO4IFW",
+  client_secret: "EXG1Z3AT2AVHD30FUHVH32AFODU3ZIBUIVBV2FHRWP0KG5UX",
+  v: 20152001
+}).done(function(data) {
+  $.each(data.response.groups, function(i, item) {
+      console.log(item);
+  });
+});
+
+//Returns all venues in the "burgers" category
+/*
+$.getJSON("https://api.foursquare.com/v2/venues/search", {
+  ll: ll,
+  radius: 1000,
+  limit: 20,
+  intent: "browse",
+  categoryId: "4bf58dd8d48988d16c941735",
+  client_id: "IWVYEGXHSXRTHD3YH432S4V3UGM1CJ1MGLA5Y4BFMISO4IFW",
+  client_secret: "EXG1Z3AT2AVHD30FUHVH32AFODU3ZIBUIVBV2FHRWP0KG5UX",
+  v: 20152001
+}).done(function(data) {
+  $.each(data.response.venues, function(i, item) {
+      console.log(item);
+  });
+});
+*/
+
