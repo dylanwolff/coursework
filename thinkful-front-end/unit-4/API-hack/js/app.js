@@ -1,3 +1,17 @@
+var currentLat = 0;
+var currentLong = 0;
+
+//Get location
+window.onload = function(){
+    navigator.geolocation.getCurrentPosition(function(position) {  
+      window.currentLat = position.coords.latitude;
+      window.currentLong = position.coords.longitude;
+      window.currentLatLong = new google.maps.LatLng(currentLat,currentLong);
+      callApi();
+    });
+}
+
+/*
 // Google Maps code //
 
 var map;
@@ -49,19 +63,15 @@ function handleNoGeolocation(errorFlag) {
 }
 
 google.maps.event.addDomListener(window, 'load', initialize);
-
+*/
 
 // Foursquare code //
 
-//Need to take lat & long from geolocation and feed into API request
-var latitude = -37.813761;
-var longitude = 144.963335;
-var ll = latitude + "," + longitude;
-
-//Returns recommended "burger joint" venues
+//Returns recommended "burger joint" venues within 10km
+function callApi() {
 $.getJSON("https://api.foursquare.com/v2/venues/explore", {
-  ll: ll,
-  radius: 1000,
+  ll: currentLat + "," + currentLong,
+  radius: 10000,
   query: "burger joint",
   limit: 20,
   time: "any",
@@ -74,12 +84,14 @@ $.getJSON("https://api.foursquare.com/v2/venues/explore", {
       console.log(item);
   });
 });
+}
 
-//Returns all venues in the "burgers" category
+//Returns all venues within 10km in the "burgers" category
 /*
+function callAPI() {
 $.getJSON("https://api.foursquare.com/v2/venues/search", {
-  ll: ll,
-  radius: 1000,
+  ll: currentLat + "," + currentLong,
+  radius: 5000,
   limit: 20,
   intent: "browse",
   categoryId: "4bf58dd8d48988d16c941735",
@@ -91,5 +103,6 @@ $.getJSON("https://api.foursquare.com/v2/venues/search", {
       console.log(item);
   });
 });
+}
 */
 
