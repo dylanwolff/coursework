@@ -1,5 +1,6 @@
 var currentLat = 0;
 var currentLong = 0;
+var currentLatLong =0;
 
 //Get location
 window.onload = function(){
@@ -64,6 +65,7 @@ function handleNoGeolocation(errorFlag) {
 
 google.maps.event.addDomListener(window, 'load', initialize);
 */
+
 
 // Foursquare code //
 
