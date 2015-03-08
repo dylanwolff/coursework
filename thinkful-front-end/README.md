@@ -1,4 +1,4 @@
 thinkful-front-end
 ==================
 
-Projects from the Thinkful Front End Web Development course.
+Projects from Thinkful's Front End Web Development course (http://www.thinkful.com/courses/learn-web-development-online).
