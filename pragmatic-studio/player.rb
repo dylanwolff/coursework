@@ -1,4 +1,5 @@
 class Player
+
   attr_accessor :name
   attr_reader :health
 
@@ -7,13 +8,8 @@ class Player
     @health = health
   end
 
-  def score
-    @health + @name.length
-  end
-
-  def w00t
-    @health += 15
-    puts "#{@name} got w00ted!"
+  def to_s
+    "I'm #{@name} with a health of #{@health} and a score of #{score}."
   end
 
   def blam
@@ -21,9 +17,19 @@ class Player
     puts "#{@name} got blammed!"
   end
 
-  def to_s
-    "I'm #{@name} with a health of #{@health} and a score of #{score}."
+  def w00t
+    @health += 15
+    puts "#{@name} got w00ted!"
   end
+
+  def score
+    @health + @name.length
+  end
+
+  def strong?
+    @health > 100
+  end
+  
 end
 
 if __FILE__ == $0
