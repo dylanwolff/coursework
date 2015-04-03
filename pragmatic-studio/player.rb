@@ -11,6 +11,12 @@ class Player
     @found_treasures = Hash.new(0)
   end
 
+  def each_found_treasure
+    @found_treasures.each do |name, points|
+      yield Treasure.new(name, points)
+    end
+  end
+
   def blam
     @health -= 10
     puts "#{@name} got blammed!"
