@@ -1,4 +1,5 @@
 class Die
+  
   attr_reader :number
 
   def initialize
