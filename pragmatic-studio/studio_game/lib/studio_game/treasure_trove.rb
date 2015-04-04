@@ -2,7 +2,6 @@ module StudioGame
   Treasure = Struct.new(:name, :points)
 
   module TreasureTrove
-
     TREASURES = [
       Treasure.new(:pie,        5),
       Treasure.new(:bottle,     25),

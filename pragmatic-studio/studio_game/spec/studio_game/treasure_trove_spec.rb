@@ -2,7 +2,6 @@ require 'studio_game/treasure_trove'
 
 module StudioGame
   describe Treasure do
-
     before do
       @treasure = Treasure.new(:hammer, 50)
     end
@@ -14,11 +13,9 @@ module StudioGame
     it "has a points attribute" do
       @treasure.points.should == 50
     end
-
   end
 
   describe TreasureTrove do
-
     it "has six treasures" do
       TreasureTrove::TREASURES.size.should == 6
     end

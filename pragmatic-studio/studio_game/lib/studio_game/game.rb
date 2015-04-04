@@ -52,7 +52,8 @@ module StudioGame
     def print_stats
       puts "\n#{@title} Statistics:"
 
-      strong_players, wimpy_players = @players.partition { |player| player.strong? }
+      strong_players, wimpy_players =
+                                  @players.partition { |player| player.strong? }
 
       puts "\n#{strong_players.size} strong players:"
       strong_players.each do |player|
@@ -85,7 +86,7 @@ module StudioGame
       end
     end
 
-    def save_high_scores(to_file="high_scores.txt")
+    def save_high_scores(to_file = "high_scores.txt")
       File.open(to_file, "w") do |file|
         file.puts "#{@title} High Scores:"
         @players.sort.each do |player|

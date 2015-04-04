@@ -2,7 +2,6 @@ require 'studio_game/player'
 
 module StudioGame
   describe Player do
-
     before do
       @initial_health = 150
       @player = Player.new("larry", @initial_health)
@@ -123,6 +122,5 @@ module StudioGame
         Treasure.new(:bottle, 25)
       ]
     end
-
   end
 end

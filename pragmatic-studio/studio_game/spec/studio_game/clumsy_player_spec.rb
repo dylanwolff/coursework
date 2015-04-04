@@ -2,7 +2,6 @@ require 'studio_game/clumsy_player'
 
 module StudioGame
   describe ClumsyPlayer do
-
     before do
       @player = ClumsyPlayer.new("klutz")
     end
@@ -29,6 +28,5 @@ module StudioGame
 
       yielded.should == [Treasure.new(:hammer, 75), Treasure.new(:crowbar, 200)]
     end
-
   end
 end

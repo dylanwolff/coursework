@@ -2,7 +2,6 @@ require 'studio_game/game'
 
 module StudioGame
   describe Game do
-
     before do
       @game = Game.new("Knuckleheads")
 

@@ -21,7 +21,7 @@ module StudioGame
   end
 end
 
-if __FILE__ == $0
+if __FILE__ == $PROGRAM_NAME
   player = Player.new("curly", 125)
   GameTurn.take_turn(player)
 end

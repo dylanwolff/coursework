@@ -2,7 +2,6 @@ require_relative 'player'
 
 module StudioGame
   class ClumsyPlayer < Player
-
     def found_treasure(treasure)
       damaged_treasure = Treasure.new(treasure.name, treasure.points / 2)
       super(damaged_treasure)
@@ -10,7 +9,7 @@ module StudioGame
   end
 end
 
-if __FILE__ == $0
+if __FILE__ == $PROGRAM_NAME
   clumsy = ClumsyPlayer.new("klutz")
 
   hammer = Treasure.new(:hammer, 50)

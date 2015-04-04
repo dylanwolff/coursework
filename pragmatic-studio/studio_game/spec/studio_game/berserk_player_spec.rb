@@ -2,7 +2,6 @@ require 'studio_game/berserk_player'
 
 module StudioGame
   describe BerserkPlayer do
-
     before do
       @initial_health = 50
       @player = BerserkPlayer.new("berserker", @initial_health)
@@ -26,6 +25,5 @@ module StudioGame
 
       @player.health.should == @initial_health + (8 * 15)
     end
-
   end
 end

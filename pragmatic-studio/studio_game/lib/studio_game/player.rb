@@ -8,7 +8,7 @@ module StudioGame
     attr_accessor :name
     attr_reader :health
 
-    def initialize(name, health=100)
+    def initialize(name, health = 100)
       @name = name.capitalize
       @health = health
       @found_treasures = Hash.new(0)
@@ -53,7 +53,7 @@ module StudioGame
   end
 end
 
-if __FILE__ == $0
+if __FILE__ == $PROGRAM_NAME
   player = Player.new("moe")
   puts player.name
   puts player.health

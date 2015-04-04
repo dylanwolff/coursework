@@ -2,8 +2,7 @@ require_relative 'player'
 
 module StudioGame
   class BerserkPlayer < Player
-
-    def initialize(name, health=100)
+    def initialize(name, health = 100)
       super(name, health)
       @w00t_count = 0
     end
@@ -14,7 +13,7 @@ module StudioGame
 
     def w00t
       super
-      @w00t_count +=1
+      @w00t_count += 1
       puts "#{@name} is berserk!" if berserk?
     end
 
@@ -28,7 +27,7 @@ module StudioGame
   end
 end
 
-if __FILE__ == $0
+if __FILE__ == $PROGRAM_NAME
   berserker = BerserkPlayer.new("berserker", 50)
   6.times { berserker.w00t }
   2.times { berserker.blam }
