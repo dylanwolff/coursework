@@ -3,7 +3,6 @@ require_relative 'game_turn'
 require_relative 'treasure_trove'
 
 class Game
-
   attr_accessor :title
 
   def initialize(title)
