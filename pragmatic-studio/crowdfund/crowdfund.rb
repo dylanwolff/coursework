@@ -1,17 +1,13 @@
-project1 = "Project ABC"
-project2 = "Project LMN"
-project3 = "Project XYZ"
+def time
+  current_time = Time.new
+  current_time.strftime("%A, %B %d, %Y")
+end
 
-funding1 = 1000
-funding2 = 0
-funding3 = 0
+def project_listing(name, funding = 0)
+  "#{name} has $#{funding} in funding as of #{time}."
+end
 
-puts "#{project1} has $#{funding1} in funding."
-puts "#{project2} has $#{funding2} in funding."
-puts "#{project3} has $#{funding3} in funding."
-
-puts "Projects:\n\t#{project1}\n\t#{project2}\n\t#{project3}"
-
-current_time = Time.new
-formatted_time = current_time.strftime("%A %m/%d/%Y at %I:%M%p")
-puts "Funding amounts as of #{formatted_time}."
+puts project_listing("Project ABC", 1000)
+puts project_listing("Project LMN", 500)
+puts project_listing("Project XYZ", 25)
+puts project_listing("Project TBD")
