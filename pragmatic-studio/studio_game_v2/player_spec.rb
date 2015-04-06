@@ -36,13 +36,23 @@ describe Player do
     @player.health.should == @initial_health - 10
   end
 
-  context "created with a default health" do
+  context "with a health greater than 100" do
     before do
-      @player = Player.new("larry")
+      @player = Player.new("larry", 150)
     end
 
-    it "has a health of 100" do
-      @player.health.should == 100
+    it "is strong" do
+      @player.should be_strong
+    end
+  end
+
+  context "with a health of 100 or less" do
+    before do
+      @player = Player.new("larry", 100)
+    end
+
+    it "is wimpy" do
+      @player.should_not be_strong
     end
   end
 end
