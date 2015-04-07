@@ -1,4 +1,3 @@
-require_relative 'spec_helper'
 require_relative 'game'
 
 describe Game do
@@ -18,7 +17,7 @@ describe Game do
 
     @game.play
 
-    @player.health.should == @initial_health + 15
+    expect(@player.health).to eq(@initial_health + 15)
   end
 
   it "skips the player if a medium number is rolled" do
@@ -26,7 +25,7 @@ describe Game do
 
     @game.play
 
-    @player.health.should == @initial_health
+    expect(@player.health).to eq(@initial_health)
   end
 
   it "blams the player if a low number is rolled" do
@@ -34,6 +33,6 @@ describe Game do
 
     @game.play
 
-    @player.health.should == @initial_health - 10
+    expect(@player.health).to eq(@initial_health - 10)
   end
 end
