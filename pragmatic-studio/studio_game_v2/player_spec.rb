@@ -8,6 +8,13 @@ describe Player do
     $stdout = StringIO.new
   end
 
+  it "can be created from a CSV string" do
+    player = Player.from_csv("larry,150")
+
+    expect(@player.name).to eq("Larry")
+    expect(@player.health).to eq(150)
+  end
+
   it "has a capitalized name" do
     expect(@player.name).to eq("Larry")
   end
