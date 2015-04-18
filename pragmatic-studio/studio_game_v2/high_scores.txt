@@ -1,6 +1,6 @@
 Knuckleheads High Scores:
-Alvin............... 300
+Alvin............... 315
+Berserker........... 265
 Theo................ 165
 Klutz............... 97.5
-Simon............... 65
-Berserker........... 45
+Simon............... 80
